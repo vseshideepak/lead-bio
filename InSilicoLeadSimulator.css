@@ -1,0 +1,84 @@
+/* In-Silico Lead Simulator — white and black theme to match the app */
+
+.ils-page { display: grid; gap: 18px; color: #111; }
+
+.ils-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 16px; flex-wrap: wrap;
+}
+.ils-header h1 { margin: 6px 0; font-size: 26px; }
+.ils-header p { margin: 0; color: #555; font-size: 13px; line-height: 1.6; }
+.ils-eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 1.6px; color: #555; margin: 0; }
+.ils-horizon {
+  border: 1px solid #222; border-radius: 20px; padding: 7px 14px;
+  font-size: 11px; font-weight: 800; letter-spacing: .8px;
+}
+
+.ils-notice, .ils-diagram-note {
+  border: 1px solid #ddd; background: #f7f7f7; border-radius: 10px;
+  padding: 13px 15px; font-size: 12px; line-height: 1.7;
+}
+.ils-notice p { margin: 4px 0 0; }
+.ils-diagram-note { margin-top: 14px; }
+
+.ils-form, .ils-results { display: grid; gap: 16px; }
+.ils-panel {
+  background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 18px;
+  min-width: 0;
+}
+.ils-panel h2 { margin: 0 0 12px; font-size: 16px; }
+.ils-panel h3 { margin: 0 0 8px; font-size: 14px; }
+.ils-help { color: #555; font-size: 12px; line-height: 1.6; margin: 10px 0 0; }
+
+.ils-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
+}
+.ils-grid label {
+  display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600;
+}
+.ils-grid input, .ils-grid select {
+  width: 100%; min-width: 0; padding: 9px 10px; border-radius: 6px; font: inherit;
+}
+.ils-grid small { font-weight: 400; color: #555; }
+
+.ils-run, .ils-export {
+  border: 1px solid #111 !important; border-radius: 8px; padding: 12px 18px;
+  font-weight: 700; cursor: pointer;
+}
+.ils-run { background: #111 !important; color: #fff !important; justify-self: start; }
+.ils-run:hover { background: #333 !important; }
+.ils-export { padding: 9px 14px; }
+
+.ils-error {
+  border: 1px solid #a33; background: #fff4f4; color: #7a1f1f;
+  border-radius: 10px; padding: 12px 14px; font-size: 13px;
+}
+
+.ils-process {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+}
+.ils-process-step { border: 1px solid #ddd; border-radius: 10px; padding: 14px; }
+.ils-process-step h3 { margin: 8px 0 6px; font-size: 13px; }
+.ils-process-step p { margin: 0; font-size: 11px; line-height: 1.6; color: #555; }
+.ils-process-number { font-size: 11px; font-weight: 800; letter-spacing: 1px; color: #555; }
+
+.ils-result-heading {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 12px; flex-wrap: wrap;
+}
+.ils-result-heading h2 { margin: 4px 0; }
+.ils-result-heading p { margin: 0; color: #555; font-size: 13px; }
+
+.ils-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.ils-metric { border: 1px solid #ddd; border-radius: 10px; padding: 14px; display: grid; gap: 6px; }
+.ils-metric span { font-size: 11px; color: #555; }
+.ils-metric strong { font-size: 18px; }
+
+.ils-chart { width: 100%; }
+
+@media (max-width: 900px) {
+  .ils-grid, .ils-process, .ils-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .ils-grid, .ils-process, .ils-metrics { grid-template-columns: 1fr; }
+}
